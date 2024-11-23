@@ -25,7 +25,7 @@ So to calculate the value of a Brass Razoo (BRZ):
 This gives us values of: of 1 BRZ = US$0.0069
 
 | Currency | Value | Example Value |
-|---|---|
+|---|---|---|
 | BRZ | 1.0 | 1,000,000 |
 | US $ | 0.00692749 | 6,927.49 |
 | EUR € | 0.006647306 | 6,647.3064 |
