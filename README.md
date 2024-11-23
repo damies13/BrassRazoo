@@ -22,7 +22,7 @@ So to calculate the value of a Brass Razoo (BRZ):
 | Zinc | 2966.50 | 2.96650 | 0.00296650 | 34 | 0.00100861 |
 |  |  |  |  | Total | 0.00692749 |
 
-This gives us values of: of 1 BRZ = US$0.0069
+This gives us values of:
 
 | Currency | Value | Example Value |
 |---|---|---|
