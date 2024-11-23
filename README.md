@@ -16,7 +16,7 @@ To give an example of calculating the nominal value of 1 BRZ on the 23 November 
 
 So to calculate the value of a Brass Razoo (BRZ):
 
-| Mineral | US$ / Tonne | US$ / Kg | US$ / Kg | Mineral % | US$ portion of value |
+| Mineral | US$ / Tonne | US$ / Kg | US$ / g | Mineral % | US$ portion of value |
 |---|---|---|---|---|---|
 | Copper | 8968.00 | 8.96800 | 0.00896800 | 66 | 0.00591888 |
 | Zinc | 2966.50 | 2.96650 | 0.00296650 | 34 | 0.00100861 |
