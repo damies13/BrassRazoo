@@ -11,7 +11,7 @@ As such the Brass Razoo block chain intentionally has a very minimal value, howe
 To give an example of calculating the nominal value of 1 BRZ on the 23 November 2024:
 
 - From the London Metal Exchange (LME) we gather the price of each mineral in US$ / Tonne (1000 Kg), this calculation is using the closing 3 month contract price as at closing of the 22 Nov 2024
-  - [Copper](https://www.lme.com/Metals/Non-ferrous/LME-Copper#Summary) was US$8,968.00 / Tonne
+	- [Copper](https://www.lme.com/Metals/Non-ferrous/LME-Copper#Summary) was US$8,968.00 / Tonne
 	- [Zinc](https://www.lme.com/en/Metals/Non-ferrous/LME-Zinc#Summary) was US$2,966.50 / Tonne
 
 So to calculate the value of a Brass Razoo (BRZ):
