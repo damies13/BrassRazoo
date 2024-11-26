@@ -43,3 +43,7 @@ UUID that uniquely identifies the server that is elected to generate the next bl
 ## Transactions
 
 A dictionary of transactions, the keys of the dictionary is the transaction id, with the value being a dictionary representing the transaction detail.
+
+## New Blocks
+
+In order to be eligible to create a new block a server must have someone stake some Brass Razoos with that server, the maximum value of all transactions a server can add to a block is limited but the total Brass Razoos staked with that server

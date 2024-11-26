@@ -1,6 +1,60 @@
 
 # Transactions
 
+A transactions is a python dictionary that gets been converted to a JSON string when added to a block.
+
+All transactions should have the following keys:
+
+- Transaction ID
+- Type
+- Status
+- Creator
+- Description
+- Signature
+
+Transactions may also have the following common keys, as well as Transaction type specific keys:
+
+- Recipient
+- Total
+- Recurring
+- Start Date
+- End Date
+- Details
+- Serial Number
+
+## Transaction ID
+
+UUID that uniquely identifies this block
+
+## Type
+
+String identifying the type of transaction, e.g.
+- account - a user / business account
+- transfer - normally a one off transaction, like a sale of an object
+- contract - normally reoccurring transactions, like wages, rent, services, subscriptions
+- object - normally registration of something physical to be sold
+- rule - validation rule for validating transaction and blocks
+- task - reoccurring job task for server to perform
+
+## Status
+
+String identifying the status of a transaction, e.g.
+- pending
+- completed
+- rejected
+
+## Creator
+
+ID of the account that created the transaction
+
+## Description
+
+Free text string that helps creator and receiver know what the transaction is for.
+
+## Signature
+
+Digital signature of the Creator, you should be able to use a users public key to verify the transaction
+
 ## Pending Transactions
 
 When a Brass Razoo Client creates a transaction it will be sent to a Brass Razoo Server, this server will then append the transaction to the pending transactions queue.
