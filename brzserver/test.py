@@ -17,6 +17,6 @@ t2 = "Bob sends 1 NC to Mike"
 t3 = "Mike sends 3 NC to Dan"
 
 # initial_block = brzbase.Block.Block().new_block("Genisis Block", {"t1":t1, "t2":t2, "t3":t3})
-initial_block = bc.new_block("Genisis Block", {"t1":t1, "t2":t2, "t3":t3})
+initial_block = bc.new_block("00000000-0000-1000-0000-000000000000", {"t1":t1, "t2":t2, "t3":t3})
 
 print(initial_block)
