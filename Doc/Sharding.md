@@ -5,7 +5,7 @@ Sharding will be automatic and is dependant on the number servers that are curre
 
 A server only needs to retain:
 - blocks matching it's shard
-- transactions that are not yet confirmed into a block up to 30 days
+- Records that are not yet confirmed into a block up to 30 days
 
 ### less than 32 (0x1F) servers
 

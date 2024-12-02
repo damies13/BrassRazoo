@@ -11,7 +11,7 @@ All blocks should have the following keys:
 - Server ID
 - Server Owner
 - Next Server ID
-- Transactions
+- Records
 
 Once the block is constructed, it's converted to a JSON string and hashed, the key "Block Hash" with the value of the hash is added to the block and then stored. when verifying a previous block you should remove the "Block Hash" key/value from the dictionary to verify the hashed value.
 
@@ -40,10 +40,10 @@ ID of the account that will receive the server's commission for creating the blo
 
 UUID that uniquely identifies the server that is elected to generate the next block
 
-## Transactions
+## Records
 
-A dictionary of transactions, the keys of the dictionary is the transaction id, with the value being a dictionary representing the transaction detail.
+A dictionary of Records, the keys of the dictionary is the record id, with the value being a dictionary representing the record data.
 
 ## New Blocks
 
-In order to be eligible to create a new block a server must have someone stake some Brass Razoos with that server, the maximum value of all transactions a server can add to a block is limited but the total Brass Razoos staked with that server
+In order to be eligible to create a new block a server must have someone stake some Brass Razoos with that server, the maximum value of all Records a server can add to a block is limited but the total Brass Razoos staked with that server

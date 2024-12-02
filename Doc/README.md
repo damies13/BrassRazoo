@@ -5,8 +5,9 @@
 2. Applications provided by this project
   - [Server](Server.md)
   - [Client](Client.md)
-3. [Transactions](Transactions.md)
-4. [Rules Engine](Rules_Engine.md)
+3. [Records](Records.md)
+4. [Action Engine](Action_Engine.md)
+
 5. [Staking](Staking.md)
 6. [Sharding](Sharding.md)
 
