@@ -2,6 +2,8 @@ import hashlib
 import json
 import uuid
 
+from . import Yeast
+
 class Block:
 
 	blocks = {}
@@ -15,7 +17,9 @@ class Block:
 
 
 		# myid = "d69f7446-ac9f-11ef-b3cd-1062e51b6a98"
-		myid = "00000000-0000-1000-0000-000000000000"
+		# myid = "00000000-0000-1000-0000-000000000000"
+		# myid = "1000000000000000000000"
+		myid = "BrassRazoo00BrassRazoo"
 		# myid = str(uuid.uuid1())
 		# myid = str(uuid.uuid1(node=genisis))
 		# myid = str(uuid.uuid1(node=genisis, clock_seq=88888))
@@ -24,47 +28,55 @@ class Block:
 
 		records = {}
 
-		records["8d98d089-2f4a-469b-85a8-f4e59fd2cc4c"] = {
-															"Record ID": "8d98d089-2f4a-469b-85a8-f4e59fd2cc4c",
+		# id0 = " 8d98d089-2f4a-469b-85a8-f4e59fd2cc4c"
+		id0 = "3xXQowiBSG00000000000O"
+		records[id0] = {
+															"Record ID": id0,
 															"Revision": 0,
 															"Type": "Account",
 															"Status": "Completed",
-															"Creator": "8d98d089-2f4a-469b-85a8-f4e59fd2cc4c",
+															"Creator": id0,
 															"Description": "Brass Razoo Foundation",
 															"Signature": "",
 															"IsValid": True
 														}
-		records["546c426f-3562-48de-a60e-5669ff501ccb"] = {
-															"Record ID": "546c426f-3562-48de-a60e-5669ff501ccb",
+		# id1 = " 546c426f-3562-48de-a60e-5669ff501ccb"
+		id1 = "3xXQtLiBSG00000000000O"
+		records[id1] = {
+															"Record ID": id1,
 															"Revision": 0,
 															"Type": "Transfer",
 															"Status": "Completed",
-															"Creator": "8d98d089-2f4a-469b-85a8-f4e59fd2cc4c",
+															"Creator": id0,
 															"Description": "Initial Ballance",
 															"Signature": "",
-															"Recipient": "8d98d089-2f4a-469b-85a8-f4e59fd2cc4c",
+															"Recipient": id0,
 															"Ammount": 999999999999999.999,
 															"IsValid": True
 														}
-		records["63275786-1bf2-4745-975b-065646395a3c"] = {
-															"Record ID": "63275786-1bf2-4745-975b-065646395a3c",
+		# id2 = " 63275786-1bf2-4745-975b-065646395a3c"
+		id2 = "3xXQwNiBSG00000000000O"
+		records[id2] = {
+															"Record ID": id2,
 															"Revision": 0,
 															"Type": "Server",
 															"Status": "Completed",
-															"Creator": "63275786-1bf2-4745-975b-065646395a3c",
+															"Creator": id2,
 															"Description": "brzserver_v0.0.1",
 															"Signature": "",
 															"IP6": "",
 															"IsValid": True
 														}
-		records["a63e853f-a7ac-4f5e-b63e-a52f93019d06"] = {
-															"Record ID": "a63e853f-a7ac-4f5e-b63e-a52f93019d06",
+		# id3 = " a63e853f-a7ac-4f5e-b63e-a52f93019d06"
+		id3 = "3xW_VjiBSG00000000000O"
+		records[id3] = {
+															"Record ID": id3,
 															"Revision": 0,
 															"Type": "Stake",
 															"Status": "Completed",
-															"Creator": "8d98d089-2f4a-469b-85a8-f4e59fd2cc4c",
+															"Creator": id0,
 															"Description": "Initial Stake",
-															"Server": "63275786-1bf2-4745-975b-065646395a3c",
+															"Server": id2,
 															"Ammount": 888.000,
 															"Signature": "",
 															"IsValid": True
@@ -134,14 +146,18 @@ class Block:
 		try:
 			return self.blocks[block_id]
 		except:
-			raise Exception("No block found with Id", block_id) 
+			raise Exception(f"No block found with Id: {block_id}")
 
 	def new_block(self, previous_id, transactions):
-		myid = str(uuid.uuid1())
+
+		prev_block = self.get_block(previous_id)
+
+		# myid = str(uuid.uuid1())
+		myid = Yeast.encode(uuid.uuid1().int)
 		self.blocks[myid] = {}
 		self.blocks[myid]["Id"] = myid
 		self.blocks[myid]["Previous Id"] = previous_id
-		self.blocks[myid]["Previous Hash"] = self.blocks[previous_id]["Hash"]
+		self.blocks[myid]["Previous Hash"] = prev_block["Hash"]
 		self.blocks[myid]["Transactions"] = transactions
 
 		# print(self.blocks[myid])

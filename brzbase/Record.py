@@ -1,6 +1,7 @@
 
 import uuid
 
+from . import Yeast
 
 class Record:
 
@@ -11,7 +12,8 @@ class Record:
 
 	def new_record(self, creator):
 
-		myid = str(uuid.uuid1())
+		# myid = str(uuid.uuid1())
+		myid = Yeast.encode(uuid.uuid1().int)
 
 		record = {
 			"Record ID": myid,

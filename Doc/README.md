@@ -2,6 +2,7 @@
 
 
 1. [Calculating the value of a Brass Razoo](calculating_the_value_of_a_brass_razoo.md)
+2. [Brass Razoo ID's](BrassRazooIDs.md)
 2. Applications provided by this project
   - [Server](Server.md)
   - [Client](Client.md)
