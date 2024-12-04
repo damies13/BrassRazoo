@@ -8,6 +8,8 @@ A server only needs to retain:
 - Records that are not yet confirmed into a block up to 28 days
 - blocks the server created
 
+## Auto sharding process
+
 The auto sharding process is initiated by the nominated server when it detects the auto sharding condition has been meet.
 
 The condition for auto sharding is simple:
