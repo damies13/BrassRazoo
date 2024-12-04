@@ -10,6 +10,7 @@
 1. [Action Engine](Action_Engine.md)
 
 1. [Staking](Staking.md)
+1. [Commissions](Commissions.md)
 1. [Sharding](Sharding.md)
 
 1. [Block Structure](Block_Structure.md)

@@ -18,11 +18,11 @@ Once the block is constructed, it's converted to a JSON string and hashed, the k
 
 ## Block ID
 
-UUID that uniquely identifies this block
+Brass Razoo ID that uniquely identifies this block
 
 ## Previous Block ID
 
-UUID that uniquely identifies the previous block
+Brass Razoo ID that uniquely identifies the previous block
 
 ## Previous Block Hash
 
@@ -30,7 +30,7 @@ The hash that verifies the previous block
 
 ## Server ID
 
-UUID that uniquely identifies the server generating the block
+Brass Razoo ID that uniquely identifies the server generating the block
 
 ## Server Owner
 
@@ -38,7 +38,7 @@ ID of the account that will receive the server's commission for creating the blo
 
 ## Next Server ID
 
-UUID that uniquely identifies the server that is elected to generate the next block
+Brass Razoo ID that uniquely identifies the server that is elected to generate the next block
 
 ## Records
 

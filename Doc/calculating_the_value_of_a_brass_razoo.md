@@ -16,9 +16,9 @@ So to calculate the value of a Brass Razoo (BRZ):
 
 This gives us values of:
 
-| Currency | Value | Example Value |
+| Currency | Value | Minimum Stake Value |
 |---|---|---|
-| BRZ | 1.0 | 1,000,000 |
+| BRZ | 1.0 | 1,000,000.00 |
 | US $ | 0.00692749 | 6,927.49 |
 | EUR € | 0.006647306 | 6,647.3064 |
 | GB £ | 0.005527259 | 5,527.2593 |

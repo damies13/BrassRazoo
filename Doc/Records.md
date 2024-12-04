@@ -25,7 +25,7 @@ Records may also have the following common keys, as well as record type specific
 
 ## Record ID
 
-UUID that uniquely identifies this record
+Brass Razoo ID that uniquely identifies this record
 
 ## Type
 
