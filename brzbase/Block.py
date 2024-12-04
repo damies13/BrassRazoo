@@ -19,7 +19,8 @@ class Block:
 		# myid = "d69f7446-ac9f-11ef-b3cd-1062e51b6a98"
 		# myid = "00000000-0000-1000-0000-000000000000"
 		# myid = "1000000000000000000000"
-		myid = "BrassRazoo00BrassRazoo"
+		# myid = "BrassRazoo00BrassRazoo"
+		myid = "BrassRazooGenisisBlock"
 		# myid = str(uuid.uuid1())
 		# myid = str(uuid.uuid1(node=genisis))
 		# myid = str(uuid.uuid1(node=genisis, clock_seq=88888))
@@ -29,7 +30,8 @@ class Block:
 		records = {}
 
 		# id0 = " 8d98d089-2f4a-469b-85a8-f4e59fd2cc4c"
-		id0 = "3xXQowiBSG00000000000O"
+		# id0 = "3xXQowiBSG00000000000O"
+		id0 = "BrassRazooFoundation00"
 		records[id0] = {
 															"Record ID": id0,
 															"Revision": 0,
