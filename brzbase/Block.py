@@ -1,14 +1,18 @@
+
 import hashlib
 import json
-import uuid
-
-from . import Yeast
+# import uuid
+# from . import Yeast
+# from . import Id
 
 class Block:
 
 	blocks = {}
 
-	def __init__(self):
+	brzbase = None
+
+	def __init__(self, brzbase):
+		self.brzbase = brzbase
 		self.genisis_block()
 
 	def genisis_block(self):
@@ -155,7 +159,9 @@ class Block:
 		prev_block = self.get_block(previous_id)
 
 		# myid = str(uuid.uuid1())
-		myid = Yeast.encode(uuid.uuid1().int)
+		# myid = Yeast.encode(uuid.uuid1().int)
+		myid = self.brzbase.Id.new_id()
+
 		self.blocks[myid] = {}
 		self.blocks[myid]["Id"] = myid
 		self.blocks[myid]["Previous Id"] = previous_id
