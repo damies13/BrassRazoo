@@ -16,14 +16,12 @@ class Shard:
 	def set_shard_size(self, size):
 		self.shard_size = size
 
-	def get_current_shard(self):
+	def get_current_shard(self, id):
 		shard = None
 		if self.shard_size > 0:
-			serverid = self.brzbase.Id.get_server_id()
-			shard = serverid[-self.shard_size]
+			shard = id[-self.shard_size]
 		return shard
 
-	def get_next_shard(self):
-		serverid = self.brzbase.Id.get_server_id()
-		shard = serverid[-(self.shard_size+1)]
+	def get_next_shard(self, id):
+		shard = id[-(self.shard_size+1)]
 		return shard

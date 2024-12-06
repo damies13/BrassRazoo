@@ -16,8 +16,9 @@ class api(bottle.Bottle):
 	@app.route("/api/server")
 	def server_details():
 		data = {}
-		data["server_id"] = app.brzserver.brzbase.Id.get_server_id()
+		# data["server_id"] = app.brzserver.brzbase.Id.get_server_id()
 		# data["server_id"] = brzserver.brzbase.Id.get_server_id()
+		data["server_id"] = app.brzserver.config["server_id"]
 		return data
 
 	@app.route("/api/block/<blockid>")
