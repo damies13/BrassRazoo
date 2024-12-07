@@ -1,6 +1,6 @@
 # Brass Razoo (BRZ)
 
-The Brass Razoo (BRZ) is a block chain crypto currency written in python named after the slang term [_I haven't got a brass razoo_](https://en.wikipedia.org/wiki/Brass_razoo)
+The Brass Razoo (BRZ) is a proof of stake block chain crypto currency written in python named after the slang term [_I haven't got a brass razoo_](https://en.wikipedia.org/wiki/Brass_razoo)
 
 As such the Brass Razoo block chain intentionally has a very minimal value, however it will be a stable coin of sorts, unlike other stable coins it's not pegged to a specific currency, but rather it's nominal value will be pegged to the value of [brass](https://en.wikipedia.org/wiki/Brass). A mineral coin if you like.
 
