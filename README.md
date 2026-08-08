@@ -1,17 +1,17 @@
 # Brass Razoo (BRZ)
 
-The Brass Razoo (BRZ) is a proof of stake block chain crypto currency written in python named after the slang term [_I haven't got a brass razoo_](https://en.wikipedia.org/wiki/Brass_razoo)
+Brass Razoo (BRZ) is a Proof-of-Stake (PoS) blockchain cryptocurrency developed in Python. The name is derived from the slang term [_I haven't got a brass razoo_](https://en.wikipedia.org/wiki/Brass_razoo), but the currency itself is a stable, resource-backed digital asset.
 
-As such the Brass Razoo block chain intentionally has a very minimal value, however it will be a stable coin of sorts, unlike other stable coins it's not pegged to a specific currency, but rather it's nominal value will be pegged to the value of [brass](https://en.wikipedia.org/wiki/Brass). A mineral coin if you like.
+**Core Concept: Metallurgic Value**
+Unlike other stablecoins pegged to fiat currencies, BRZ's nominal value is pegged to the real-world value of brass. The project uses the metallurgical properties of [brass](https://en.wikipedia.org/wiki/Brass), an alloy typically composed of 66% copper and 34% zinc—to determine its value.
 
-1 BRZ = 1 gram of brass
+**Valuation:**
+1 BRZ is equivalent to 1 gram of brass.
 
-[Brass](https://en.wikipedia.org/wiki/Brass) being an alloy can have varying percentages of each metal that makes up the alloy, for the purposes of determining the value of a Brass Razoo (BRZ) use the values of 66% copper and 34% zinc.
+The calculation of BRZ's nominal value is determined by factoring the market prices of the component metals (Copper and Zinc). The detailed calculation methodology, including example values from November 23, 2024, can be found in the [Value Calculation Documentation](./Doc/calculating_the_value_of_a_brass_razoo.md).
 
-[Calculating the value of a Brass Razoo](Doc/calculating_the_value_of_a_brass_razoo.md) on the 23 November 2024, gives us values of:
-
-| Currency | Value | Example Value |
-|---|---|---|
+| Currency | BRZ Value Equivalent | Example Conversion Value |
+| :--- | :--- | :--- |
 | BRZ | 1.0 | 1,000,000 |
 | US $ | 0.00692749 | 6,927.49 |
 | EUR € | 0.006647306 | 6,647.3064 |
@@ -19,5 +19,5 @@ As such the Brass Razoo block chain intentionally has a very minimal value, howe
 | JP ¥ | 1.0722277 | 1,072,227.70 |
 | AU $ | 0.01065448 | 10,654.48 |
 
-
-The Full details of Brass Razoo are in the [documentation](Doc/README.md).
+**Full Project Documentation**
+For a comprehensive understanding of the architecture, protocols, and mechanics, please consult the complete [Brass Razoo Documentation](./Doc/README.md).

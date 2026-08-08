@@ -1,8 +1,14 @@
-
 # Brass Razoo Client
 
-The Brass Razoo Client, will probably be developed with [Kivy](https://kivy.org/) so that it can be provided as an Android and iOS app, as well as hopefully a desktop app for Mac, Windows & Linux.
+The Brass Razoo Client is planned for development using [Kivy](https://kivy.org/), enabling its deployment as an application for Android, iOS, and desktop environments (Mac, Windows, and Linux).
 
-## QR Codes
+## QR Codes Workflow
 
-The intention is the client will generate QR codes for records, if you want to request payment from someone, you would fill in the details of the record, show the QR Code to the buyer, they would then use the camera on their device to scan the QR Code which would load the record on their device, they would then pay/confirm/complete the record and you'll both be able to see the finalised record in your record list and any relevant funds transferred.
+The client features the generation of QR codes for records. If a user wishes to request payment, the following workflow is followed:
+
+1.  The user completes the details of the desired record.
+2.  A QR code is generated and presented to the buyer.
+3.  The buyer uses their camera to scan the QR code, which loads the record onto their device.
+4.  The buyer then confirms or completes the record transaction and makes the payment.
+
+Upon successful completion, both parties will be able to view the finalised record in their respective record lists, along with details of any funds transferred.

@@ -1,9 +1,8 @@
-
 # Block Structure
 
-A block is a python dictionary that has been converted to a JSON string, this makes decoding and working with a block easy.
+A block is structured as a Python dictionary, which is then serialized into a JSON string for easy decoding and processing.
 
-All blocks should have the following keys:
+All blocks must contain the following keys:
 
 - Block ID
 - Previous Block ID
@@ -13,8 +12,7 @@ All blocks should have the following keys:
 - Next Server ID
 - Records
 
-Once the block is constructed, it's converted to a JSON string and hashed, the key "Block Hash" with the value of the hash is added to the block and then stored. when verifying a previous block you should remove the "Block Hash" key/value from the dictionary to verify the hashed value.
-
+Once constructed, the block is converted to a JSON string and subsequently hashed. The resulting hash is stored under the "Block Hash" key. When verifying a preceding block, this key/value pair must be removed from the dictionary before hash verification.
 
 ## Block ID
 
@@ -42,8 +40,8 @@ Brass Razoo ID that uniquely identifies the server that is elected to generate t
 
 ## Records
 
-A dictionary of Records, the keys of the dictionary is the record id, with the value being a dictionary representing the record data.
+A dictionary of Records, where the keys represent the record ID, and the value is a dictionary representing the record data.
 
 ## New Blocks
 
-In order to be eligible to create a new block a server must have someone stake some Brass Razoos with that server, the maximum value of all Records a server can add to a block is limited but the total Brass Razoos staked with that server
+To be eligible to create a new block, a server must have users who have staked Brass Razoos with it. The maximum value of Records a server can include in a block is limited by the total amount of Brass Razoos staked with that server.

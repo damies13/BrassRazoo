@@ -1,19 +1,17 @@
-
 # Brass Razoo Server
 
-The Brass Razoo Server, written purely in python so that it can be run on any OS and any hardware, it should run just as well on a Raspberry Pi as it does on a Xeon server in a data centre.
+The Brass Razoo Server is written entirely in Python, ensuring it can operate across various operating systems and hardware setups. It runs efficiently, whether deployed on a low-power device like a Raspberry Pi or a high-performance Xeon server in a data centre.
 
-## First Run
+## Initial Deployment
 
-On first run the server will generate it's configuration file, in this file will be the server's ID (a [Brass Razoo ID](BrassRazooIDs.md)), from this point forward this Brass Razoo ID will be used to identify this server.
+Upon its first run, the server will generate its configuration file. This file contains the server's unique ID—a Brass Razoo ID (see [BrassRazooIDs.md]). This Brass Razoo ID serves as the permanent identifier for the server.
 
-## OS Upgrade / Moving to new hardware
+## Hardware Migration and Identity Retention
 
-If you want to move a server, you only need to save and migrate the configuration file and the server will retain the identity of the old server. you will need to ensure the old server is shutdown before starting the new server and ensure the old server cannot be brought back up with it's same Brass Razoo ID.
+If the server needs to be moved to new hardware, only the configuration file must be saved and migrated. The server will retain its original identity. It is essential to ensure the old server is completely shut down before starting the new instance, and that the old server cannot be restarted using its original Brass Razoo ID.
 
-> [!WARNING]
-> Need to determine an method for detecting duplicate servers and determining which is the "original" server with that Brass Razoo ID
+> [!WARNING] A robust method must be developed to detect duplicate servers and determine which server is the 'original' authority associated with a specific Brass Razoo ID.
 
-## Staking Server
+## Staking Server Status
 
-A Staking Server is a server who has had a Brass Razoo stake allocated to it.
+A Staking Server is defined as any server that has had a Brass Razoo stake allocated to it.

@@ -1,98 +1,86 @@
-
 # Records
 
-A record is a python dictionary that gets been converted to a JSON string when added to a block.
+A record is a Python dictionary that is converted into a JSON string when added to a block.
 
-All records should have the following keys:
+All records must contain the following keys:
 
-- Record ID
-- Type
-- Status
-- Creator
-- Description
-- Signature
-- IsValid
+*   Record ID
+*   Type
+*   Status
+*   Creator
+*   Description
+*   Signature
+*   IsValid
 
-Records may also have the following common keys, as well as record type specific keys:
+Records may also contain the following common keys, in addition to type-specific keys:
 
-- Recipient
-- Total
-- Recurring
-- Start Date
-- End Date
-- Details
-- Serial Number
+*   Recipient
+*   Total
+*   Recurring
+*   Start Date
+*   End Date
+*   Details
+*   Serial Number
 
 ## Record ID
 
-Brass Razoo ID that uniquely identifies this record
+The unique Brass Razoo ID identifying this record.
 
 ## Type
 
-String identifying the type of record, e.g.
-- account - a user / business account
-- server - details about a server that may be used for generating blocks when a it has sufficient stakes
-- stake - record of number of Brass Razoos a person has staked with a server
-- transfer - normally a one off record, like a sale of an object
-- contract - normally reoccurring records, like wages, rent, services, subscriptions
-- object - normally registration of something physical to be sold
-- action
-	- rule - validation rule for validating record and blocks
-	- task - reoccurring job task for server to perform
+A string that identifies the record type, such as:
+
+*   **Account:** A user or business account.
+*   **Server:** Details about a server capable of generating blocks when it holds sufficient stakes.
+*   **Stake:** Records the number of Brass Razoos staked by an individual with a server.
+*   **Transfer:** Typically a one-off record, such as an item sale.
+*   **Contract:** Typically a recurring record, used for wages, rent, services, or subscriptions.
+*   **Object:** Used for registering physical items intended for sale.
+*   **Action:**
+    *   **Rule:** A validation rule applied to records and blocks.
+    *   **Task:** A recurring job task performed by the server.
 
 ## Status
 
-String identifying the status of a record, e.g.
-- pending
-- completed
-- rejected
+A string indicating the current status of the record, for example:
+
+*   Pending
+*   Completed
+*   Rejected
 
 ## Creator
 
-ID of the account that created the record
+The ID of the account that created the record.
 
 ## Description
 
-Free text string that helps creator and receiver know what the record is for.
+A free-text string intended to inform both the creator and the receiver of the record's purpose.
 
 ## Signature
 
-Digital signature of the Creator, you should be able to use a users public key to verify the record
+The digital signature of the Creator. This signature should be verifiable using the user's public key.
 
 ## IsValid
 
-The IsValid key is initially set to false when a record is received, then after the rules action engine has run a applied the rules to the record, the status will be updated to true if all rules pass.
+This key is initially set to `False` upon record receipt. After the rules action engine has run its validation rules, the status is updated to `True` if all rules pass successfully.
 
-## Pending Records
+# Record Queues and Sharding
 
-When a Brass Razoo Client creates a record it will be sent to a Brass Razoo Server, this server will then append the record to the pending records queue.
+When a Brass Razoo Client creates a record, it is sent to a designated Brass Razoo Server, which appends the record to its pending queue.
 
-The Brass Razoo Server will periodically run the Record rules engine against the Records in the pending Records queue:
-- Records that pass the rule validation will be moved to the Queued Records queue for inclusion in the next block
-- Records that fail the rule validation will be moved to the Rejected Records queue for inclusion in the next block
+The Brass Razoo Server periodically runs the Record rules engine against the pending queue. Records are then directed to specific queues:
 
-Pending Records are broadcast to all servers who's shard matches the Record shard as a pending Record.
+*   **Queued Records:** Records that pass validation are moved here, awaiting inclusion in the next block.
+*   **Rejected Records:** Records that fail validation are moved here.
 
-## Queued Records
+These queues (Pending, Queued, Rejected) are broadcast to all servers whose shard matches the record's shard.
 
-Queued Records are broadcast to all servers who's shard matches the Record shard as a queued Record.
+*   **Confirmed Records:** Once a record is successfully added to a block, it becomes a Confirmed Record and is broadcast to all matching shard servers.
 
-## Rejected Records
+# Requesting Record Status / Details
 
-Rejected Records are broadcast to all servers who's shard matches the Record shard as a rejected Record.
+A client requests the record status and details from any connected server. The server, upon receiving this request, determines the record's designated shard and forwards the request to its nearest corresponding server within that shard.
 
-## Confirmed Records
+# New Blocks
 
-Once a Record is added to a block it becomes a confirmed Record
-
-Confirmed Records are broadcast to all servers who's shard matches the Record shard as a queued Record.
-
-## Requesting Record status / details
-
-A client will request the Record status and details from whichever server it is connected to
-
-A server when receiving a Record status or details request will determine which shard the Record belongs to and ask it's nearest server belonging to that shard.
-
-## New Blocks
-
-In order to be eligible to create a new block a server must have someone stake some Brass Razoos with that server, the maximum value of all Records a server can add to a block is limited but the total Brass Razoos staked with that server
+To be eligible to create a new block, a server must have users who have staked Brass Razoos with it. The maximum value of Records a server can include in a block is limited, by the total amount of Brass Razoos staked with that server must be considered.
