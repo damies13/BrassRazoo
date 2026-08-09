@@ -13,8 +13,18 @@ The minimum stake size is 1,000,000.00 Brass Razoos.
 **Transaction Rules**
 *   A staked amount cannot be spent until it has been successfully de-staked.
 
+**De-Staking**
+*   to initiate the de-staking process the stake holder lists the stake as unavailable
+*   Once the last block the stake was used on has been crtified by 5 or more servers, a staked amount can be considerd de-staked and returned to the stake holder as usable funds.
+
 **Security and Recovery**
-*   Should a subsequent staking server identify a record as fraudulent, the server will attempt to roll back the record. If rollback fails, the stake is utilised to provide any necessary refunds.
+*   Staking servers will validate the entire block chain on startup
+*   Staking servers will validate the proposed blocks as they are received and broadcast to the shard block IDs that failed validation along with the record IDs that triggered the failure
+*   Staking servers will validate the proposed block before before creating a new block based on that proposed block
+*   Staking servers will validate the blocks the proposed block is based on are valid or have had any invalid records corrected in subsequent blocks
+*   Should a subsequent staking server identify a record in the chain as invalid, the server will attempt to roll back the record. If rollback fails, the stake is utilised to provide any necessary refunds.
+*   By proprosing a new block the staking server is certifying all the previous blocks in the chain have been validated
+*   Once a block is crtified by 2 or more servers a roll back requires a vote to determine it as invalid
 
 **Incentives**
 *   The stake holder will receive a commission on every block generated using their stake.

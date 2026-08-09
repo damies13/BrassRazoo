@@ -21,4 +21,6 @@ This repository contains the complete documentation for the Brass Razoo project,
 *   [Records](./Records.md): Definition and structure of system records.
 *   [Sharding](./Sharding.md): Architecture for data distribution across nodes.
 *   [Staking](./Staking.md): Protocol and rules for staking Brass Razoos.
+*   [Voting](./Voting.md): Brass Razoos Voting process.
+
 

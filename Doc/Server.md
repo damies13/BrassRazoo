@@ -15,3 +15,7 @@ If the server needs to be moved to new hardware, only the configuration file mus
 ## Staking Server Status
 
 A Staking Server is defined as any server that has had a Brass Razoo stake allocated to it.
+
+## Server Startup
+
+On server startup, the server should verify every block in the chain for the shard it lives in, then it should pull all currently available block in the shard and verify them before becoming available for creating new blocks

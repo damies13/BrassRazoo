@@ -7,6 +7,7 @@ All blocks must contain the following keys:
 - Block ID
 - Previous Block ID
 - Previous Block Hash
+- Stake IDs
 - Server ID
 - Server Owner
 - Next Server ID
@@ -25,6 +26,10 @@ Brass Razoo ID that uniquely identifies the previous block
 ## Previous Block Hash
 
 The hash that verifies the previous block
+
+## Stake IDs
+
+A list of Brass Razoo IDs that uniquely identifies the stakes that backed this block
 
 ## Server ID
 

@@ -7,6 +7,7 @@ A server only needs to retain:
 - blocks matching it's shard
 - Records that are not yet confirmed into a block up to 28 days
 - blocks the server created
+- all blocks from neighbouring shards (in the same parent shard), when the neighbouring shard has less than 5 servers. this is to prevent data loss if de-sharding process is triggered
 
 ## Auto sharding process
 
@@ -42,7 +43,6 @@ Auto de-sharding occurs when there is no longer sufficient staked servers to ens
 - The shard length is decremented by 1
 - the server will immediately start collecting and storing blocks belonging to the current shard.
 
-
 ## The reasoning behind sharding
 
 Having too few shards will mean records will queue up and take a long time to be processed, other block chains try to resolve this by using GAS but this becomes very expensive to get records processed
@@ -56,3 +56,9 @@ This auto sharding process is an attempt to balance this with the commission str
 - incentives server and stake owners to have much as possible staked on 1 server so larger valued records can be added to the block (if the record value is too large then it can't be staked by this server as there are insufficient stakes to stake the record, it will be passed to the next server to collect the commissions on that record)
 
 The combination of incentives should hopefully create a balance creating enough demand for new servers to maintain redundancy and to allow sharding to happen but not so many that sharding happens too quickly.
+
+## Data Storage
+
+Theoretically the mechinisim the server uses for storing block data shouldn't matter and different Brass Razoo server implimntations could use different methods for storing data locally as long as the blocks are identical when transferred between servers.
+
+For simplicity this implimntation will use a SQLite database for disk storage of blocks, with in memory indexes of which block and record IDs are available on this server (shard). Recently used blocks could also be cached in memory.

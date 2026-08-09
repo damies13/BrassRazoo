@@ -16,6 +16,18 @@ There are two methods for calculating block commissions:
 *   A fixed commission of 0.001 BRZ is charged for each record with no associated monetary value.
 *   The total value derived from Method B cannot exceed 1% of the total stakes held by the server.
 
+### Roll Back Records
+
+For the purposes of calculating commisions, roll back records shall be treated as having no monetary value.
+
+## Minimum Block Size
+
+A server should not propose a new block before the time limit if:
+- The block has less than 3 records 
+- the block is below the servers stake limit
+
+The server should aim to get the highest commisions it can for the stake holders and server owner
+
 ## Time Limits
 
 To prevent servers from delaying block creation in order to maximise commissions, a strict time limit will be applied. A server may wait up to five minutes from the creation time of the preceding block to fulfil the commission quota for both methods.
