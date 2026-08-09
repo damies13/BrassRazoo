@@ -16,9 +16,9 @@ There are two methods for calculating block commissions:
 *   A fixed commission of 0.001 BRZ is charged for each record with no associated monetary value.
 *   The total value derived from Method B cannot exceed 1% of the total stakes held by the server.
 
-### Roll Back Records
+### Reversal Records
 
-For the purposes of calculating commisions, roll back records shall be treated as having no monetary value.
+For the purposes of calculating commisions, reversal records shall be treated as having no monetary value.
 
 ## Minimum Block Size
 

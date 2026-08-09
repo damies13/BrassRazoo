@@ -22,9 +22,9 @@ The minimum stake size is 1,000,000.00 Brass Razoos.
 *   Staking servers will validate the proposed blocks as they are received and broadcast to the shard block IDs that failed validation along with the record IDs that triggered the failure
 *   Staking servers will validate the proposed block before before creating a new block based on that proposed block
 *   Staking servers will validate the blocks the proposed block is based on are valid or have had any invalid records corrected in subsequent blocks
-*   Should a subsequent staking server identify a record in the chain as invalid, the server will attempt to roll back the record. If rollback fails, the stake is utilised to provide any necessary refunds.
+*   Should a subsequent staking server identify a record in the chain as invalid, the server will attempt to reverse the record. If reversal fails, the stake is utilised to provide any necessary refunds.
 *   By proprosing a new block the staking server is certifying all the previous blocks in the chain have been validated
-*   Once a block is crtified by 2 or more servers a roll back requires a vote to determine it as invalid
+*   Once a block is certified by 2 or more servers a reversal requires a vote to determine it as invalid
 
 **Incentives**
 *   The stake holder will receive a commission on every block generated using their stake.

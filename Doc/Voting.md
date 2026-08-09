@@ -18,7 +18,7 @@ there re no vetoes
 ## Automated voting
 
 The following can be resolved with automated voting:
-- decision on if a record should be rolled back because it doesn't follow the rules
+- decision on if a record should be reversed because it doesn't follow the rules
 
 ## Manual voting
 
