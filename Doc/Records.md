@@ -60,6 +60,12 @@ A free-text string intended to inform both the creator and the receiver of the r
 
 The digital signature of the Creator. This signature should be verifiable using the user's public key.
 
+The signature is applied initially by the creator and then by any modifier of the document. when a document is modified it's version must also be incremented so that original document can be verified.
+
+The most basic example of this would be a in person sale record; the seller would create a sale document, with the details of what is being sold and the price, etc, then sign the document when it's complete. The buyer would then verify the sale document, incerment the version and add their details (buyer, agreement to the sale contract, agreement to make the payment, etc), then sign the second version of the document, completing the document and the sale.
+
+If a server receives a record with no signature it should be rejected.
+
 ## IsValid
 
 This key is initially set to `False` upon record receipt. After the rules action engine has run its validation rules, the status is updated to `True` if all rules pass successfully.

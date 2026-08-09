@@ -30,6 +30,8 @@ A task is utilised for periodic server actions.
 
 Every rule must have a timeout set in robot framework not exceeding 1 hour, this can be done either on the test or suite level.
 
+As an example a periodic contract task could trigger daily check for all contracts in the current server's shard that are due for the current day and queue a payment record, next time the server creates a block it would first check no existing payment record for that contract exists in the chain, and if the current time is after the payment due time then add that payment record to the block.
+
 # Robot Framework Libraries
 
 Rules and Tasks have access to the following libraries:
