@@ -20,7 +20,7 @@ class Record:
 
 		record = {
 			"Record ID": myid,
-			"Version": 0,
+			"Revision": 0,
 			"Type": "",
 			"Status": "",
 			"Creator": creator,

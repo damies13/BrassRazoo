@@ -7,7 +7,7 @@ All records must contain the following keys:
 *   Record ID
 *   Type
 *   Status
-*   Version
+*   Revision
 *   Creator
 *   Description
 *   Signature
@@ -52,9 +52,9 @@ A string indicating the current status of the record, for example:
 *   Completed
 *   Rejected
 
-## Version
+## Revision
 
-Interger value denoting the document version number, must be sequential.
+Interger value denoting the document revision number, must be sequential.
 
 ## Creator
 
