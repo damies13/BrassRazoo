@@ -7,6 +7,7 @@ All records must contain the following keys:
 *   Record ID
 *   Type
 *   Status
+*   Version
 *   Creator
 *   Description
 *   Signature
@@ -15,6 +16,9 @@ All records must contain the following keys:
 Records may also contain the following common keys, in addition to type-specific keys:
 
 *   Recipient
+*   Public Data
+*   Private Data
+*   Algorithm
 *   Total
 *   Recurring
 *   Start Date
@@ -47,6 +51,10 @@ A string indicating the current status of the record, for example:
 *   Pending
 *   Completed
 *   Rejected
+
+## Version
+
+Interger value denoting the document version number, must be sequential.
 
 ## Creator
 

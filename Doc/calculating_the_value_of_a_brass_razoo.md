@@ -29,3 +29,13 @@ This calculation yields the following conversion values for one BRZ:
 | Copper | Zinc |
 | :--- | :--- |
 | ![Image](Images/Copper_2024-11-23.png "Copper") | ![Image](Images/Zinc_2024-11-23.png "Zinc") |
+
+# Data sources
+
+Sellers of Brass Razoos into local currencies may reference any metals exchange they wish to calculate the local currency equevilent value of a Brass Razoo, however the seller should:
+- use the same exchange for both metals (not pick prices from different exchanges for each metal)
+- declare to the buyer which exchange was used for price data
+- declare any currency conversion rate (and source) if the prices on the metals exchange are in a differnt currency than being used for the sale of Brass Razoos
+- declare any exchange fees the seller is charging
+
+Buyers may also reference any metals exchange they wish to calculate the local currency equevilent value of a Brass Razoo, however the must also make the same declerations as the seller (above) if attempting to negotiate the price with the seller.

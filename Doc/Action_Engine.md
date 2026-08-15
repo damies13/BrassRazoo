@@ -2,6 +2,8 @@
 
 The Action Engine is utilised for verifying and validating records and executing tasks that calculate the nominal value across various currencies.
 
+Commissions on Rule, Rule Validation and Task records shall be calculated using Method B
+
 ## Robot Framework
 
 The Action Engine employs [Robot Framework](https://robotframework.org/) to process rules and tasks. However, is limited to specific libraries, each rule or task must be a self-contained Robot Framework test or task, containing all necessary keywords not available from standard libraries.
@@ -23,6 +25,8 @@ The Type field value should be used in the tags section of the robot test to ide
 The rule engine may employ pabot or other approaches to process the records in parallel
 
 Every rule must have a timeout set in robot framework not exceeding 5 seconds, this can be done either on the test or suite level.
+
+The block that inndtroduces the rule shall also have one or more validation records with the desciption of `<rule name>-validation-<nnn>` where `nnn` is unique string (may be just sequetial numbers). these validation rules included in the same block as the rule will allow the block to become the block of truth for this rule. 
 
 # Task Actions
 

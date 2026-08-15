@@ -18,21 +18,31 @@ There are two methods for calculating block commissions:
 
 ### Reversal Records
 
-For the purposes of calculating commisions, reversal records shall be treated as having no monetary value.
+For the purposes of calculating commisions, reversal records shall be treated as having no monetary value, so shall be included in the Method B calculation.
 
 ## Minimum Block Size
 
 A server should not propose a new block before the time limit if:
-- The block has less than 3 records 
+- The block has less than 3 records (not including the commision records)
 - the block is below the servers stake limit
 
 The server should aim to get the highest commisions it can for the stake holders and server owner
+
+As the server will need to add at least 3 records for commisions payment (one for each Stake Holder, one for the Server Owner and one for the Foundation) every block will have at least 3 records, ensureing a minimum payment for every block.
+
+The records of commisions payment by the server shall be treated as having no monetary value, so shall be included in the Method B calculation.
 
 ## Time Limits
 
 To prevent servers from delaying block creation in order to maximise commissions, a strict time limit will be applied. A server may wait up to five minutes from the creation time of the preceding block to fulfil the commission quota for both methods.
 
 Once the quota is filled, the nominated server must propose a new block as soon as possible, but within the specified time limit.
+
+In order to ensure the server is able to meet the time limit for proposing a block the following should be considered:
+- The server should keep track of which queued records (and versions) it has already verified
+- Once a server is nominated as the next block proposer it should immidatly validate any queued records that are candidates for adding to the block and not already validated
+- when a server receives a record (regardless of if it's the nominated next block proposer or not) the server may want to validate the record upon reciving it to smooth out the validation load on the server.
+
 
 ## Paying Commissions
 

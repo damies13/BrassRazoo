@@ -19,3 +19,20 @@ A Staking Server is defined as any server that has had a Brass Razoo stake alloc
 ## Server Startup
 
 On server startup, the server should verify every block in the chain for the shard it lives in, then it should pull all currently available block in the shard and verify them before becoming available for creating new blocks
+
+This start up verificaton serves mulitple purposes:
+- gives the server owner and stake holders confidence in the validity of the chain
+- gives confidence to the chain that all servers agree on the chain being valid
+- gives confidence to the chain that this server can create valid blocks
+
+During start up verification if the server is not able to validate a Block of Truth, the server should shut down and report to the owner via the console which truth block validation failed.
+
+If the server fails truth block validation on startup the server owner should roll back software versions until truth block validation succeeds, referring to the servers logs may be helpful in identifying what software has been updated recently and therefore what should be rolled back.
+
+It's suggested to use stable releases of the servers operating system, python and Robot framework versions to avoid server outages.
+
+## Blocks of Truth
+
+- The first block in the Brass Razoo chain is the first block of truth
+- As rules can not be applied to blocks before the rule existed, the block that introduced a new rule shall be the block of truth for that rule.
+
