@@ -3,7 +3,7 @@
 Brass Razoo (BRZ) is a Proof-of-Stake (PoS) blockchain cryptocurrency developed in Python. The name is derived from the slang term [_I haven't got a brass razoo_](https://en.wikipedia.org/wiki/Brass_razoo), but the currency itself is a stable, resource-backed digital asset.
 
 **Core Concept: Metallurgic Value**
-Unlike other stablecoins pegged to fiat currencies, BRZ's nominal value is pegged to the real-world value of brass. The project uses the metallurgical properties of [brass](https://en.wikipedia.org/wiki/Brass), an alloy typically composed of 66% copper and 34% zinc—to determine its value.
+Unlike other stable coins pegged to fiat currencies, BRZ's nominal value is pegged to the real-world value of brass. The project uses the metallurgical properties of [brass](https://en.wikipedia.org/wiki/Brass), an alloy typically composed of 66% copper and 34% zinc—to determine its value.
 
 **Valuation:**
 1 BRZ is equivalent to 1 gram of brass.
