@@ -20,12 +20,13 @@ class Record:
 
 		record = {
 			"Record ID": myid,
-			"Revision": 0,
+			"Version": 0,
 			"Type": "",
 			"Status": "",
 			"Creator": creator,
 			"Description": "",
 			"Signature": "",
+			"IsValid": False,
 		}
 
 		return record
