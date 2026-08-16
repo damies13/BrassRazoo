@@ -17,6 +17,7 @@ The core ledger of all system entities and actions.
 | `block_id` | BRZ_ID  (FK) | The block identifier where this record was included |
 | `type` | TEXT | 'Account', 'Server', 'Stake', 'Transfer', 'Contract', 'Object', 'Action' |
 | `status` | TEXT | 'Pending', 'Queued', 'Rejected', 'Confirmed' |
+| `description` | TEXT | record description |
 | `record_data` | JSON | Type-specific metadata (e.g., recurring dates, serial numbers) |
 | `is_valid` | BOOLEAN | Updated by Action Engine |
 | `timestamp` | TIMESTAMP | Record creation time |
