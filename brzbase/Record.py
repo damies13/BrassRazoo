@@ -26,7 +26,7 @@ class Record:
 			"Creator": creator,
 			"Description": "",
 			"Signature": "",
-			"IsValid": False,
+			"Is Valid": False,
 		}
 
 		return record

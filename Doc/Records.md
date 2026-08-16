@@ -11,7 +11,7 @@ All records must contain the following keys:
 *   Creator
 *   Description
 *   Signature
-*   IsValid
+*   Is Valid
 
 Records may also contain the following common keys, in addition to type-specific keys:
 
@@ -74,7 +74,7 @@ The most basic example of this would be a in person sale record; the seller woul
 
 If a server receives a record with no signature it should be rejected.
 
-## IsValid
+## Is Valid
 
 This key is initially set to `False` upon record receipt. After the rules action engine has run its validation rules, the status is updated to `True` if all rules pass successfully.
 

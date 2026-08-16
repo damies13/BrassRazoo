@@ -22,7 +22,7 @@ class api(bottle.Bottle):
 		return data
 
 	@app.route("/api/block/<blockid>")
-	def server_details(blockid="BrassRazooGenisisBlock"):
+	def get_block_details(blockid="BrassRazooGenisisBlock"):
 		try:
 			data = app.brzserver.brzbase.Block.get_block(blockid)
 		except:

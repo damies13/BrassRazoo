@@ -154,7 +154,7 @@ class Block:
 		except:
 			raise Exception(f"No block found with Id: {block_id}")
 
-	def new_block(self, previous_id, transactions):
+	def new_block(self, previous_id, records):
 
 		prev_block = self.get_block(previous_id)
 
@@ -163,14 +163,18 @@ class Block:
 		myid = self.brzbase.Id.new_id()
 
 		self.blocks[myid] = {}
-		self.blocks[myid]["Id"] = myid
-		self.blocks[myid]["Previous Id"] = previous_id
-		self.blocks[myid]["Previous Hash"] = prev_block["Hash"]
-		self.blocks[myid]["Transactions"] = transactions
+		self.blocks[myid]["Block ID"] = myid
+		self.blocks[myid]["Stake IDs"] = []
+		self.blocks[myid]["Server ID"] = None
+		self.blocks[myid]["Server Owner"] = None
+		self.blocks[myid]["Previous Block ID"] = previous_id
+		self.blocks[myid]["Previous Block Hash"] = prev_block["Block Hash"]
+		self.blocks[myid]["Records"] = records
+		self.blocks[myid]["Next Server ID"] = None
 
 		# print(self.blocks[myid])
 
-		self.blocks[myid]["Hash"] = hashlib.sha256(json.dumps(self.blocks[myid]).encode("utf-8")).hexdigest()
+		self.blocks[myid]["Block Hash"] = hashlib.sha256(json.dumps(self.blocks[myid]).encode("utf-8")).hexdigest()
 
 		# print(self.blocks[myid])
 

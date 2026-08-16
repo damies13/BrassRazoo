@@ -125,9 +125,6 @@ class Security:
 		return signature
 
 	def verify_string_signature(self, instring, signature, public_key):
-		# Message to be verified
-		message = b"Hello, this is a secret message!"
-
 		# Verify the signature
 		try:
 			public_key.verify(
